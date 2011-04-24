@@ -25,9 +25,13 @@ public:
     void stopConnection();
 
 signals:
+    void newMsg(QString msg);
+
 
 public slots:
     void setIPAddress (const QString& addr);
+    void sendMsg(const QString& msg);
+    void incomingMsg();
 
 };
 

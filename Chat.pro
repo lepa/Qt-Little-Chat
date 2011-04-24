@@ -8,12 +8,10 @@ SOURCES += main.cpp \
     mainwindow.cpp \
     tcpsocket.cpp \
     chatserver.cpp \
-    chatclient.cpp \
-    messageparser.cpp
+    chatclient.cpp
 HEADERS += mainwindow.h \
     tcpsocket.h \
     chatserver.h \
     chatclient.h \
-    config.h \
-    messageparser.h
+    config.h
 FORMS += mainwindow.ui

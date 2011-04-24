@@ -21,6 +21,7 @@ void chatclient::startConnection(QString entrymsg)
        this->sock = new TcpSocket (this);
        this->sock->connectToHost(QHostAddress(ip), PORT);
        this->sock->write(entrymsg.toAscii());
+       connect(this->sock, SIGNAL(readyRead()), this, SLOT(incomingMsg()));
     }
     else
     {
@@ -33,4 +34,15 @@ void chatclient::startConnection(QString entrymsg)
 void chatclient::stopConnection()
 {
     delete this->sock;
+}
+
+
+void chatclient::sendMsg(const QString &msg)
+{
+    this->sock->write(msg.toAscii());
+}
+
+void chatclient::incomingMsg()
+{
+    emit newMsg ( QString ( this->sock->readAll() ) );
 }
