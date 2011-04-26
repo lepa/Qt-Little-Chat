@@ -6,6 +6,7 @@
 #include "tcpsocket.h"
 #include "config.h"
 
+
 struct Buddy
 {
     TcpSocket* sock;
@@ -16,11 +17,17 @@ struct Buddy
 class chatserver : public QObject
 {
 Q_OBJECT
+
 protected:
     QTcpServer* server;
     Buddy* first;
+
 public:
     explicit chatserver(QObject *parent = 0);
+    ~chatserver();
+
+signals:
+    void receveidMsg(QString msg);
 
 public slots:
     void onNewConnection();

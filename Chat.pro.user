@@ -76,16 +76,16 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-q2ldJE7zDZ,guid=d7e707693ecd7347c82c8d2b00000031</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-NGPnRU8RoQ,guid=d0de79aeef7cd5ce9b20e90f00000026</value>
     <value type="QString">DESKTOP_SESSION=default</value>
     <value type="QString">DISPLAY=:0.0</value>
     <value type="QString">GDMSESSION=default</value>
     <value type="QString">GDM_KEYBOARD_LAYOUT=it</value>
     <value type="QString">GDM_LANG=it_IT.utf8</value>
     <value type="QString">GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString">GNOME_KEYRING_CONTROL=/tmp/keyring-h1xSMo</value>
-    <value type="QString">GNOME_KEYRING_PID=2066</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/seahorse-UC8Mdc/S.gpg-agent:2133:1</value>
+    <value type="QString">GNOME_KEYRING_CONTROL=/tmp/keyring-5vovus</value>
+    <value type="QString">GNOME_KEYRING_PID=1906</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/seahorse-M1aWmv/S.gpg-agent:1973:1</value>
     <value type="QString">GTK_MODULES=canberra-gtk-module</value>
     <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/lepa/.gtkrc-1.2-gnome2</value>
     <value type="QString">HOME=/home/lepa</value>
@@ -96,16 +96,16 @@
     <value type="QString">PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games</value>
     <value type="QString">PWD=/home/lepa</value>
     <value type="QString">QTDIR=/usr/share/qt4</value>
-    <value type="QString">SESSION_MANAGER=local/MotherBrain:@/tmp/.ICE-unix/2085,unix/MotherBrain:/tmp/.ICE-unix/2085</value>
+    <value type="QString">SESSION_MANAGER=local/MotherBrain:@/tmp/.ICE-unix/1925,unix/MotherBrain:/tmp/.ICE-unix/1925</value>
     <value type="QString">SHELL=/bin/bash</value>
-    <value type="QString">SSH_AGENT_PID=2119</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/keyring-h1xSMo/ssh</value>
+    <value type="QString">SSH_AGENT_PID=1959</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/keyring-5vovus/ssh</value>
     <value type="QString">USER=lepa</value>
     <value type="QString">USERNAME=lepa</value>
     <value type="QString">WINDOWPATH=7</value>
-    <value type="QString">XAUTHORITY=/var/run/gdm3/auth-for-lepa-MkDAfs/database</value>
+    <value type="QString">XAUTHORITY=/var/run/gdm3/auth-for-lepa-l7Lb7r/database</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share/gnome:/usr/share/gdm/:/usr/local/share/:/usr/share/</value>
-    <value type="QString">XDG_SESSION_COOKIE=5ce3228223e30472ec676da10000000c-1303665001.580676-418615314</value>
+    <value type="QString">XDG_SESSION_COOKIE=5ce3228223e30472ec676da10000000c-1303772079.403885-1300766257</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList">
     <value type="QString">/home/lepa/Programmi/Chat/Chat.pro</value>
@@ -115,7 +115,7 @@
     <value type="QString">CONFIG+=debug</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/qmake-qt4</value>
-   <value key="abstractProcess.enabled" type="bool">true</value>
+   <value key="abstractProcess.enabled" type="bool">false</value>
    <value key="abstractProcess.workingDirectory" type="QString">/home/lepa/Programmi/Chat</value>
   </valuemap>
  </data>
@@ -123,12 +123,91 @@
   <variable>buildconfiguration-Debug-buildstep1</variable>
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList">
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-NGPnRU8RoQ,guid=d0de79aeef7cd5ce9b20e90f00000026</value>
+    <value type="QString">DESKTOP_SESSION=default</value>
+    <value type="QString">DISPLAY=:0.0</value>
+    <value type="QString">GDMSESSION=default</value>
+    <value type="QString">GDM_KEYBOARD_LAYOUT=it</value>
+    <value type="QString">GDM_LANG=it_IT.utf8</value>
+    <value type="QString">GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
+    <value type="QString">GNOME_KEYRING_CONTROL=/tmp/keyring-5vovus</value>
+    <value type="QString">GNOME_KEYRING_PID=1906</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/seahorse-M1aWmv/S.gpg-agent:1973:1</value>
+    <value type="QString">GTK_MODULES=canberra-gtk-module</value>
+    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/lepa/.gtkrc-1.2-gnome2</value>
+    <value type="QString">HOME=/home/lepa</value>
+    <value type="QString">LANG=it_IT.utf8</value>
+    <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator</value>
+    <value type="QString">LOGNAME=lepa</value>
+    <value type="QString">ORBIT_SOCKETDIR=/tmp/orbit-lepa</value>
+    <value type="QString">PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games</value>
+    <value type="QString">PWD=/home/lepa</value>
+    <value type="QString">QTDIR=/usr/share/qt4</value>
+    <value type="QString">SESSION_MANAGER=local/MotherBrain:@/tmp/.ICE-unix/1925,unix/MotherBrain:/tmp/.ICE-unix/1925</value>
+    <value type="QString">SHELL=/bin/bash</value>
+    <value type="QString">SSH_AGENT_PID=1959</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/keyring-5vovus/ssh</value>
+    <value type="QString">USER=lepa</value>
+    <value type="QString">USERNAME=lepa</value>
+    <value type="QString">WINDOWPATH=7</value>
+    <value type="QString">XAUTHORITY=/var/run/gdm3/auth-for-lepa-l7Lb7r/database</value>
+    <value type="QString">XDG_DATA_DIRS=/usr/share/gnome:/usr/share/gdm/:/usr/local/share/:/usr/share/</value>
+    <value type="QString">XDG_SESSION_COOKIE=5ce3228223e30472ec676da10000000c-1303772079.403885-1300766257</value>
+   </valuelist>
+   <value key="abstractProcess.IgnoreReturnValue" type="bool">false</value>
+   <valuelist key="abstractProcess.arguments" type="QVariantList">
+    <value type="QString">-w</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
+   <value key="abstractProcess.enabled" type="bool">true</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/lepa/Programmi/Chat</value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfiguration-Debug-cleanstep0</variable>
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList">
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-AlPYrU9uBh,guid=9f31c0a2808a888a17c5aa1d00000037</value>
+    <value type="QString">DESKTOP_SESSION=default</value>
+    <value type="QString">DISPLAY=:0.0</value>
+    <value type="QString">GDMSESSION=default</value>
+    <value type="QString">GDM_KEYBOARD_LAYOUT=it</value>
+    <value type="QString">GDM_LANG=it_IT.utf8</value>
+    <value type="QString">GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
+    <value type="QString">GNOME_KEYRING_CONTROL=/tmp/keyring-5KkQ9Q</value>
+    <value type="QString">GNOME_KEYRING_PID=1916</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/seahorse-QqWTgf/S.gpg-agent:1983:1</value>
+    <value type="QString">GTK_MODULES=canberra-gtk-module</value>
+    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/lepa/.gtkrc-1.2-gnome2</value>
+    <value type="QString">HOME=/home/lepa</value>
+    <value type="QString">LANG=it_IT.utf8</value>
+    <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator</value>
+    <value type="QString">LOGNAME=lepa</value>
+    <value type="QString">ORBIT_SOCKETDIR=/tmp/orbit-lepa</value>
+    <value type="QString">PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games</value>
+    <value type="QString">PWD=/home/lepa</value>
+    <value type="QString">QTDIR=/usr/share/qt4</value>
+    <value type="QString">SESSION_MANAGER=local/MotherBrain:@/tmp/.ICE-unix/1935,unix/MotherBrain:/tmp/.ICE-unix/1935</value>
+    <value type="QString">SHELL=/bin/bash</value>
+    <value type="QString">SSH_AGENT_PID=1969</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/keyring-5KkQ9Q/ssh</value>
+    <value type="QString">USER=lepa</value>
+    <value type="QString">USERNAME=lepa</value>
+    <value type="QString">WINDOWPATH=7</value>
+    <value type="QString">XAUTHORITY=/var/run/gdm3/auth-for-lepa-uCmZsI/database</value>
+    <value type="QString">XDG_DATA_DIRS=/usr/share/gnome:/usr/share/gdm/:/usr/local/share/:/usr/share/</value>
+    <value type="QString">XDG_SESSION_COOKIE=5ce3228223e30472ec676da10000000c-1303788835.857320-670145926</value>
+   </valuelist>
+   <value key="abstractProcess.IgnoreReturnValue" type="bool">true</value>
+   <valuelist key="abstractProcess.arguments" type="QVariantList">
+    <value type="QString">clean</value>
+    <value type="QString">-w</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
+   <value key="abstractProcess.enabled" type="bool">true</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/lepa/Programmi/Chat</value>
    <value key="cleanConfig" type="bool">true</value>
    <valuelist key="makeargs" type="QVariantList">
     <value type="QString">clean</value>

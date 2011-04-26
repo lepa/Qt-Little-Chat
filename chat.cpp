@@ -3,57 +3,75 @@
 Chat::Chat(QObject *parent) :
     QObject(parent)
 {
-    state = CLIENT;
-    sock = 0;
-    server = 0;
-    ip = "0";
+    this->server = 0;
+    this->client = new chatclient(this);
+    connect(this->client, SIGNAL(newMsg(QString)), this, SLOT(recvMsg(QString)));
 }
 
-
-void Chat::startConnection()
+Chat::~Chat()
 {
-    if (ip != "0")
+    if (this->server)
     {
-        if (state == SERVER)
-        {
-            this->server = new QTcpServer(this);
-            server->listen( QHostAddress ( this->ip ), PORT );
-            connect( this->server, SIGNAL(newConnection()), this, SLOT(onServerNewConnection()) );
-        }
-        else
-        {
-            this->sock = new QTcpSocket(this);
-            connect ( this->sock, SIGNAL(readyRead()), this, SLOT(onMessageReceived()) );
-        }
+        delete this->server;
     }
-    else
+    else if (this->client)
     {
-        ipnotset ins;
-        throw ins;
+        delete (this->client);
     }
-}
-
-
-void Chat::setServerIP(QString &addr)
-{
-    this->ip = addr;
 }
 
 
 void Chat::becomeServer()
 {
-    this->state = SERVER;
-    this->ip = "127.0.0.1";
+  if (this->client)
+  {
+    delete this->client;
+    this->client = 0;
+    this->server = new chatserver(this);
+  }
+  else
+  {
+      delete this->server;
+      this->server = new chatserver(this);
+  }
+
+  connect(this->server, SIGNAL(receveidMsg(QString)), this, SLOT(recvMsg(QString)))
 }
 
-
-void Chat::sendMessage(QString msg)
+void Chat::becomeClient()
 {
-    this->sock->write( msg.toAscii() );
+    if (this->server)
+    {
+        delete this->server;
+        this->server = 0;
+        this->client = new chatclient(this);
+    }
+    else
+    {
+        delete this->client;
+        this->client = new chatclient(this);
+    }
+
+    connect(this->client, SIGNAL(newMsg(QString)), this, SLOT(recvMsg(QString)));
 }
 
-
-void Chat::onMessageReceived()
+void Chat::sendMsg(Message msg)
 {
-
+    if (this->server)
+    {
+        this->server->broadcast( msg.toString() );
+    }
+    else
+    {
+        this->client->sendMsg( msg.toString() );
+    }
 }
+
+void Chat::recvMsg(QString msg)
+{
+    Message tmp;
+    tmp.fromString(msg);
+    emit (receivedMsg(tmp));
+}
+
+

@@ -13,7 +13,7 @@ TcpSocket::~TcpSocket()
 }
 
 
-void whenCanRead()
+void TcpSocket::whenCanRead()
 {
     emit haveToRead(this);
 }

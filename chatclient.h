@@ -4,6 +4,7 @@
 #include <QObject>
 #include "tcpsocket.h"
 #include <exception>
+#include "config.h"
 
 class ipNotSet : public std::exception
 {
@@ -16,7 +17,7 @@ class ipNotSet : public std::exception
 class chatclient : public QObject
 {
 Q_OBJECT
-private:
+protected:
     TcpSocket* sock;
     QString ip;
 public:

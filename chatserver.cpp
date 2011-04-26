@@ -5,8 +5,30 @@ chatserver::chatserver(QObject *parent) :
 {
     this->first = 0;
     this->server = new QTcpServer(this);
-    this->server->listen("127.0.0.1", PORT);
+    this->server->listen(QHostAddress("127.0.0.1"), PORT);
     connect (this->server, SIGNAL(newConnection()), this, SLOT(onNewConnection()));
+}
+
+chatserver::~chatserver()
+{
+    delete this->server;
+
+    Buddy* ptr1 = this->first;
+    Buddy* ptr2;
+
+    while (ptr1 && ptr2)
+    {
+        if (ptr1)
+        {
+            ptr2 = ptr2->next;
+            delete ptr1;
+        }
+        if (ptr2)
+        {
+            ptr1 = ptr2->next;
+            delete ptr1;
+        }
+    }
 }
 
 void chatserver::onNewConnection()
@@ -21,7 +43,7 @@ void chatserver::onNewConnection()
         {
             if (ptr->sock==0)
             {
-                ptr->sock = this->server->nextPendingConnection();
+                ptr->sock = (TcpSocket*)this->server->nextPendingConnection();
                 notdone = false;
                 connect(ptr->sock, SIGNAL(haveToRead(TcpSocket*)), this, SLOT(receivedMsg(TcpSocket*)));
             }
@@ -31,7 +53,7 @@ void chatserver::onNewConnection()
         {
             ptr->next = new Buddy;
             ptr = ptr->next;
-            ptr->sock = this->server->nextPendingConnection();
+            ptr->sock = (TcpSocket*)this->server->nextPendingConnection();
             connect(ptr->sock, SIGNAL(haveToRead(TcpSocket*)), this, SLOT(receivedMsg(TcpSocket*)));
             ptr->next = 0;
         }
