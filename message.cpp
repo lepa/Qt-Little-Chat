@@ -1,5 +1,6 @@
 #include "message.h"
 
+
 QString Message::getNickName()
 {
     return this->nickname;
@@ -15,11 +16,12 @@ QString Message::getMessage()
     return this->message;
 }
 
-void Message::operator= (Message msg)
+Message& Message::operator= (Message& msg)
 {
     this->action = msg.getAction();
     this->nickname = msg.getNickName();
     this->message = msg.getMessage();
+    return *this;
 }
 
 QString Message::toString()

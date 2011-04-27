@@ -4,7 +4,6 @@
 #include <QObject>
 #include "chatserver.h"
 #include "chatclient.h"
-#include "chatlogger.h"
 #include "message.h"
 
 
@@ -14,12 +13,13 @@ Q_OBJECT
 protected:
     chatclient* client;
     chatserver* server;
-    chatlogger* logger;
+
 public:
     explicit Chat(QObject *parent = 0);
     ~Chat();
     void becomeServer();
     void becomeClient();
+    void setIp(QString& str);
 
 signals:
     void receivedMsg(Message msg);

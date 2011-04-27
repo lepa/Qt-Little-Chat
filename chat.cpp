@@ -21,6 +21,14 @@ Chat::~Chat()
 }
 
 
+void Chat::setIp(QString& str)
+{
+    if (this->client)
+    {
+        this->client->setIPAddress(str);
+    }
+}
+
 void Chat::becomeServer()
 {
   if (this->client)
@@ -35,7 +43,7 @@ void Chat::becomeServer()
       this->server = new chatserver(this);
   }
 
-  connect(this->server, SIGNAL(receveidMsg(QString)), this, SLOT(recvMsg(QString)))
+  connect(this->server, SIGNAL(receveidMsg(QString)), this, SLOT(recvMsg(QString)));
 }
 
 void Chat::becomeClient()

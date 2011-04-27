@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "chat.h"
 
 namespace Ui {
     class MainWindow;
@@ -15,9 +16,14 @@ public:
 
 protected:
     void changeEvent(QEvent *e);
+    Chat* chat;
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void on_connectButton_pressed();
+    void on_becomeserver_stateChanged(int );
 };
 
 #endif // MAINWINDOW_H

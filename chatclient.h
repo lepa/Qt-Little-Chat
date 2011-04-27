@@ -22,6 +22,7 @@ protected:
     QString ip;
 public:
     explicit chatclient(QObject *parent = 0);
+    ~chatclient();
     void startConnection(QString name);
     void stopConnection();
 

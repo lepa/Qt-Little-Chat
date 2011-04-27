@@ -5,8 +5,6 @@
 #include <QRegExp>
 #include <QStringList>
 
-/* Azioni del messaggio */
-enum { MESSAGE, ENTER, EXIT };
 
 class Message
 {
@@ -18,7 +16,7 @@ public:
     QString getNickName();
     QString getAction();
     QString getMessage();
-    Message& operator=(const Message& msg);
+    Message& operator=(Message& msg);
     QString toString();
     void fromString(QString str);
 };

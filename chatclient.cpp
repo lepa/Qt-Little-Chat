@@ -8,6 +8,12 @@ chatclient::chatclient(QObject *parent) :
 }
 
 
+chatclient::~chatclient()
+{
+    this->stopConnection();
+}
+
+
 void chatclient::setIPAddress(const QString &addr)
 {
     this->ip = addr;
@@ -33,7 +39,11 @@ void chatclient::startConnection(QString entrymsg)
 
 void chatclient::stopConnection()
 {
-    delete this->sock;
+    if (this->sock)
+    {
+        delete this->sock;
+    }
+    this->sock = 0;
 }
 
 
@@ -41,6 +51,7 @@ void chatclient::sendMsg(const QString &msg)
 {
     this->sock->write(msg.toAscii());
 }
+
 
 void chatclient::incomingMsg()
 {
