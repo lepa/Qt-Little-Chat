@@ -50,9 +50,10 @@ void MainWindow::on_connectButton_pressed()
     {
         ui->errorLabel->setText("Il campo \"nickname\" deve essere riempito");
     }
-    else if (ui->becomeserver->isChecked())
+    else if (!ui->becomeserver->isChecked())
     {
-        this->chat->
+        this->chat->client->startConnection();
+        this->chat->sendMsg(Message::fromString());
     }
 
 

@@ -23,7 +23,7 @@ protected:
 public:
     explicit chatclient(QObject *parent = 0);
     ~chatclient();
-    void startConnection(QString name);
+    void startConnection();
     void stopConnection();
 
 signals:

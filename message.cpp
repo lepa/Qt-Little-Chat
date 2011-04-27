@@ -29,7 +29,7 @@ QString Message::toString()
     return  (":"+this->nickname+"!"+this->action+":"+this->message);
 }
 
-void Message::fromString(QString str)
+Message& Message::fromString(QString str)
 {
     QRegExp rx(":(\\c+)!(\\d+):(.+)");
     rx.exactMatch(str);
@@ -38,4 +38,6 @@ void Message::fromString(QString str)
     this->nickname = ls[0];
     this->action = ls[1];
     this->message = ls[2];
+
+    return *this;
 }

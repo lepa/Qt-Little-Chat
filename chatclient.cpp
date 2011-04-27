@@ -20,7 +20,7 @@ void chatclient::setIPAddress(const QString &addr)
 }
 
 
-void chatclient::startConnection(QString entrymsg)
+void chatclient::startConnection()
 {
     if ( ip != "" )
     {
