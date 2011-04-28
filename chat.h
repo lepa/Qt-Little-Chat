@@ -19,7 +19,7 @@ public:
     ~Chat();
     void becomeServer();
     void becomeClient();
-    void setIp(QString& str);
+    void setIp(const QString& str);
 
 signals:
     void receivedMsg(Message msg);

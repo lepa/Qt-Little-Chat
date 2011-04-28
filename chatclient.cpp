@@ -26,7 +26,6 @@ void chatclient::startConnection()
     {
        this->sock = new TcpSocket (this);
        this->sock->connectToHost( ip, PORT);
-       this->sock->write(entrymsg.toAscii());
        connect(this->sock, SIGNAL(readyRead()), this, SLOT(incomingMsg()));
     }
     else

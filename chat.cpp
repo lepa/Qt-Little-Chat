@@ -21,11 +21,12 @@ Chat::~Chat()
 }
 
 
-void Chat::setIp(QString& str)
+void Chat::setIp(const QString& str)
 {
     if (this->client)
     {
         this->client->setIPAddress(str);
+        this->client->startConnection();
     }
 }
 

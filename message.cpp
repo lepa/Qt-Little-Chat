@@ -1,9 +1,21 @@
 #include "message.h"
 
 
+void Message::setVars(QString nick, QString act, QString msg)
+{
+    this->nickname = nick;
+    this->action = act;
+    this->message = msg;
+}
+
 QString Message::getNickName()
 {
     return this->nickname;
+}
+
+void Message::setNickName(QString nick)
+{
+    this->nickname = nick;
 }
 
 QString Message::getAction()
@@ -11,9 +23,19 @@ QString Message::getAction()
     return this->action;
 }
 
+void Message::setAction(QString act)
+{
+    this->action = act;
+}
+
 QString Message::getMessage()
 {
     return this->message;
+}
+
+void Message::setMessage(QString msg)
+{
+    this->message = msg;
 }
 
 Message& Message::operator= (Message& msg)
